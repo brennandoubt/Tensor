@@ -28,14 +28,26 @@ class Tensor {
         Tensor() { this->array = {}; };
         Tensor(const vector<vector<double> >& arr) { this->array = arr; };
 
+        // copy constructor
+        Tensor(const Tensor& t) { this->array = t.array; };
+
         // using matrix multiplication algorithm
         Tensor operator*(const Tensor& other);
+
+        Tensor operator+(const vector<double>& vec);
+
+        Tensor transpose();
+
+
 
         // printing out tensor data to terminal
         string to_string();
 
         // printing out dimensions of tensor (in tuple (x, y) format)
         string shape();
+
+        size_t num_rows() const { return this->array.size(); };
+        size_t num_cols() const { return this->array[0].size(); };
 
         
 

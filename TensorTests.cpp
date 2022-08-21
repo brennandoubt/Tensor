@@ -33,6 +33,12 @@ void Test2() {
 
     cout << t_inputs.shape() << endl;
     cout << t_weights.shape() << endl;
+
+    t_weights = t_weights.transpose();
+    cout << t_weights.to_string() << '\n' << t_weights.shape() << endl;
+
+    Tensor product = t_inputs * t_weights;
+    cout << product.to_string() << endl;
 }
 
 
