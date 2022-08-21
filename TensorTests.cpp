@@ -10,6 +10,7 @@ void Test1() {
 }
 
 void Test2() {
+    cout << "RUNNING TEST 2...\n";
     // "batches" of inputs to add to network
     vector<vector<double> > inputs = {
         {1, 2, 3, 2.5},
@@ -39,6 +40,11 @@ void Test2() {
 
     Tensor product = t_inputs * t_weights;
     cout << product.to_string() << endl;
+
+    Tensor output = product + biases;
+    cout << '\n' << "---Neuron layer output (inputs*weights + biases)---\n" << output.to_string() << endl;
+
+    cout << "EXITING TEST 2...\n";
 }
 
 

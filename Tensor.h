@@ -34,8 +34,10 @@ class Tensor {
         // using matrix multiplication algorithm
         Tensor operator*(const Tensor& other);
 
+        // adding a vector to a matrix
         Tensor operator+(const vector<double>& vec);
 
+        // convert tensor's rows into columns; swapping dimensions (row x col)
         Tensor transpose();
 
 
