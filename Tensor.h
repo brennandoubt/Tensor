@@ -51,10 +51,10 @@ class Tensor {
         size_t num_rows() const { return this->array.size(); };
         size_t num_cols() const { return this->array[0].size(); };
 
+        vector<vector<double> > array; // holds tensor data
         
 
     private:
-        vector<vector<double> > array; // holds tensor data
         
         template <typename T>
         string vec_to_string(vector<T>& v); // used by public to_string method
